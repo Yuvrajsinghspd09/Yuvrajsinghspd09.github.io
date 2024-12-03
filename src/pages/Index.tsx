@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Award, Cpu, BookOpen, Code, ExternalLink, Linkedin } from "lucide-react";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -14,75 +14,134 @@ const Index = () => {
       <div className="bento-grid">
         {/* Welcome Card */}
         <div className="bento-card col-span-2">
-          <h2 className="text-sm text-gray-400 mb-2">welcome</h2>
+          <h2 className="text-sm text-purple-400 mb-2">welcome</h2>
           <h1 className="text-4xl font-bold mb-4">
-            Hi, I'm <span className="text-blue-400">Your Name</span>
+            Hi, I'm <span className="text-blue-400">Yuvraj Singh</span>
           </h1>
           <p className="text-gray-300 text-lg">
-            A software developer with a passion for creating beautiful and functional web experiences
+            ML Enthusiast passionate about creating innovative solutions using Machine Learning and Deep Learning
           </p>
-        </div>
-
-        {/* About Card */}
-        <div className="bento-card row-span-2">
-          <h2 className="text-2xl font-bold mb-6">About me</h2>
-          <p className="text-gray-300 text-lg mb-6">
-            I specialize in building modern web applications using React, TypeScript, and other cutting-edge technologies.
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-400">My tools:</p>
-            <ul className="list-disc list-inside text-gray-300 text-lg space-y-2">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Node.js</li>
-              <li>Tailwind CSS</li>
-            </ul>
+          <div className="mt-4 flex items-center gap-2">
+            <span className="px-3 py-1 bg-purple-900/50 rounded-full text-purple-300 text-sm">Python</span>
+            <span className="px-3 py-1 bg-blue-900/50 rounded-full text-blue-300 text-sm">TensorFlow</span>
+            <span className="px-3 py-1 bg-green-900/50 rounded-full text-green-300 text-sm">Deep Learning</span>
           </div>
-        </div>
-
-        {/* Time Card */}
-        <div className="bento-card">
-          <h2 className="text-lg text-gray-400 mb-4">Current Time</h2>
-          <p className="text-3xl font-bold font-mono">
-            {time.toLocaleTimeString()}
-          </p>
         </div>
 
         {/* Contact Card */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
-          <div className="flex space-x-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
-              <Github className="w-8 h-8" />
+          <div className="flex flex-col space-y-4">
+            <a href="mailto:yuvrajsinghspd09@gmail.com" 
+               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
+              <Mail className="w-5 h-5 text-blue-400" />
+              <span className="text-gray-300">Email</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
-              <Linkedin className="w-8 h-8" />
+            <a href="https://github.com/Yuvrajsinghspd09" target="_blank" rel="noopener noreferrer" 
+               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
+              <Github className="w-5 h-5 text-purple-400" />
+              <span className="text-gray-300">GitHub</span>
             </a>
-            <a href="mailto:your@email.com"
-               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
-              <Mail className="w-8 h-8" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-               className="p-3 rounded-full hover:bg-gray-800 transition-colors">
-              <Twitter className="w-8 h-8" />
+            <a href="https://www.kaggle.com/yuvrajsinghspd09" target="_blank" rel="noopener noreferrer"
+               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
+              <Cpu className="w-5 h-5 text-green-400" />
+              <span className="text-gray-300">Kaggle</span>
             </a>
           </div>
         </div>
 
-        {/* Projects Card */}
+        {/* Education Card */}
+        <div className="bento-card">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-blue-400" />
+            Education
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-lg font-semibold text-blue-300">Netaji Subhas University of Technology</h3>
+              <p className="text-gray-400">Bachelor of Technology – Electrical Engineering</p>
+              <p className="text-sm text-gray-500">Nov 2022 - present</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills Card */}
         <div className="bento-card col-span-2">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Code className="w-6 h-6 text-purple-400" />
+            Technical Skills
+          </h2>
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-lg font-semibold text-purple-300 mb-3">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Python", "C++", "C"].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-purple-900/30 rounded-full text-purple-300 text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-blue-300 mb-3">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Scikit", "Pandas", "Numpy", "TensorFlow", "Keras"].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-blue-900/30 rounded-full text-blue-300 text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects Card */}
+        <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
           <div className="grid grid-cols-2 gap-6">
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 1</h3>
-              <p className="text-gray-300">Description of your amazing project</p>
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-blue-300">NewsGuardian</h3>
+              <p className="text-gray-300 mb-4">A tool for Reddit news discovery, summarization, and credibility analysis</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">PyTorch</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Transformers</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">NLTK</span>
+              </div>
+              <a href="https://github.com/Yuvrajsinghspd09/NewsGuardian" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center text-blue-400 hover:text-blue-300">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Project
+              </a>
             </div>
-            <div className="p-6 bg-card-hover rounded-lg">
-              <h3 className="text-xl font-bold mb-3">Project 2</h3>
-              <p className="text-gray-300">Description of another cool project</p>
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-purple-300">Facial Emotion Analyzer</h3>
+              <p className="text-gray-300 mb-4">Deep learning model for detecting emotions from facial expressions</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">TensorFlow</span>
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">Keras</span>
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">OpenCV</span>
+              </div>
+              <a href="https://github.com/Yuvrajsinghspd09/Facial-Emotion-Analyzer" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center text-purple-400 hover:text-purple-300">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Project
+              </a>
             </div>
+          </div>
+        </div>
+
+        {/* Awards Card */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Award className="w-6 h-6 text-yellow-400" />
+            Honors & Awards
+          </h2>
+          <div className="p-6 bg-card-hover rounded-lg">
+            <h3 className="text-xl font-bold mb-3 text-yellow-300">American Express Campus Challenge 2024</h3>
+            <p className="text-gray-300">
+              Ranked in Top 20 for showcasing product mindset and data analytics skills to analyze match performances and
+              provide insights.
+            </p>
           </div>
         </div>
       </div>
