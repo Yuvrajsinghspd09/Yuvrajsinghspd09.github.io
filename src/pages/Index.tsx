@@ -42,6 +42,11 @@ const Index = () => {
               <Github className="w-5 h-5 text-purple-400" />
               <span className="text-gray-300">GitHub</span>
             </a>
+            <a href="https://www.linkedin.com/in/yuvraj-singh09/" target="_blank" rel="noopener noreferrer"
+               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
+              <Linkedin className="w-5 h-5 text-blue-400" />
+              <span className="text-gray-300">LinkedIn</span>
+            </a>
             <a href="https://www.kaggle.com/yuvrajsinghspd09" target="_blank" rel="noopener noreferrer"
                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
               <Cpu className="w-5 h-5 text-green-400" />
