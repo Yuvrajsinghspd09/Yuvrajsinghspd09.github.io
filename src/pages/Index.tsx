@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Github, Mail, Award, Cpu, BookOpen, Code, ExternalLink, Linkedin } from "lucide-react";
+import { Github, Mail, Award, Cpu, BookOpen, Code, ExternalLink, Linkedin, Phone } from "lucide-react";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -97,15 +97,22 @@ const Index = () => {
 
         {/* Projects Card */}
         <div className="bento-card col-span-3">
-          <h2 className="text-2xl font-bold mb-6">Featured Projects</h2>
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Code className="w-6 h-6 text-purple-400" />
+            Featured Projects
+          </h2>
           <div className="grid grid-cols-2 gap-6">
+            {/* NewsGuardian */}
             <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-3 text-blue-300">NewsGuardian</h3>
-              <p className="text-gray-300 mb-4">A tool for Reddit news discovery, summarization, and credibility analysis</p>
+              <p className="text-gray-300 mb-4">
+                A tool for Reddit news discovery, summarization, and credibility analysis. Evaluates writing style, recency, poster reliability, and assigns trust scores.
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">PyTorch</span>
                 <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Transformers</span>
                 <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">NLTK</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Reddit API</span>
               </div>
               <a href="https://github.com/Yuvrajsinghspd09/NewsGuardian" target="_blank" rel="noopener noreferrer"
                  className="flex items-center text-blue-400 hover:text-blue-300">
@@ -113,16 +120,59 @@ const Index = () => {
                 View Project
               </a>
             </div>
+
+            {/* Invoice Similarity Checker */}
             <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 text-purple-300">Facial Emotion Analyzer</h3>
-              <p className="text-gray-300 mb-4">Deep learning model for detecting emotions from facial expressions</p>
+              <h3 className="text-xl font-bold mb-3 text-purple-300">Invoice Similarity Checker</h3>
+              <p className="text-gray-300 mb-4">
+                An invoice comparison tool using NLP and computer vision techniques. Extracts text and structural features from PDFs, performs preprocessing and similarity analysis.
+              </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">TensorFlow</span>
-                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">Keras</span>
                 <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">OpenCV</span>
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">PyPDF2</span>
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">scikit-learn</span>
+                <span className="px-2 py-1 bg-purple-900/30 rounded-full text-purple-300 text-xs">spaCy</span>
+              </div>
+              <a href="https://github.com/Yuvrajsinghspd09/Document-Similarity-Matching" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center text-purple-400 hover:text-purple-300">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Project
+              </a>
+            </div>
+
+            {/* Facial Emotion Analyzer */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-green-300">Facial Emotion Analyzer</h3>
+              <p className="text-gray-300 mb-4">
+                A facial emotion detection model identifying seven different emotions from images and webcam input using deep learning techniques.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">TensorFlow</span>
+                <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">Keras</span>
+                <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">OpenCV</span>
+                <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">Streamlit</span>
               </div>
               <a href="https://github.com/Yuvrajsinghspd09/Facial-Emotion-Analyzer" target="_blank" rel="noopener noreferrer"
-                 className="flex items-center text-purple-400 hover:text-purple-300">
+                 className="flex items-center text-green-400 hover:text-green-300">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Project
+              </a>
+            </div>
+
+            {/* ASL Recognizer Model */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-yellow-300">ASL Recognizer Model</h3>
+              <p className="text-gray-300 mb-4">
+                A model recognizing individual alphabet signs in American Sign Language with 97% accuracy, showcasing proficiency in interpreting the ASL alphabet.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">TensorFlow</span>
+                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">Keras</span>
+                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">Scikit-learn</span>
+                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">OpenCV</span>
+              </div>
+              <a href="https://github.com/Yuvrajsinghspd09/ASL-Recognizer-Model" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center text-yellow-400 hover:text-yellow-300">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Project
               </a>
