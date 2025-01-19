@@ -36,7 +36,7 @@ const Index = () => {
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
           <div className="flex flex-col space-y-4">
-            <a href="mailto:yuvrajsinghspd09@gmail.com" 
+            <a href="mailto:singhyuvrajf1@gmail.com" 
                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors">
               <Mail className="w-5 h-5 text-blue-400" />
               <span className="text-gray-300">Email</span>
@@ -104,75 +104,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Open Source Contributions Section */}
-        <div className="bento-card col-span-3">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <GitFork className="w-6 h-6 text-orange-400" />
-            Open Source Contributions
-          </h2>
-          <div className="grid grid-cols-1 gap-6">
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-blue-300">Aiven</span> / 
-                <span className="text-purple-300">CLI Cookbook</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Added "Copy to Clipboard": Enabled single-key command copying to simplify user interaction and enhance usability.</li>
-                <li>Streamlined Contributions: Created a structured issue template to improve feedback clarity and collaboration.</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-red-300">CERN</span> / 
-                <span className="text-purple-300">cernopendata-portal</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Improved logging output structure for better readability and maintainability.</li>
-                <li>Added an optional "availability" field to dataset records with multiple status options.</li>
-                <li>Enhanced data accessibility and user experience through better field management.</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-blue-300">Nextcloud</span> / 
-                <span className="text-purple-300">Summary Bot</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Implemented Job Persistence using SQLAlchemyJobStore with SQLite.</li>
-                <li>Enhanced Reliability through improved APScheduler implementation.</li>
-                <li>Optimized Database Performance using SQLAlchemy.</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-green-300">Weaviate</span> / 
-                <span className="text-purple-300">t2v-transformers-models</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Enhanced Meta Endpoint to include model_path in responses.</li>
-                <li>Improved Model Tracking for complex setups.</li>
-                <li>Pull request under review for implementation.</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-blue-300">Nextcloud</span> / 
-                <span className="text-purple-300">translate2</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Implemented persistent model loading for faster processing.</li>
-                <li>Added thread locking for safe concurrent translations.</li>
-                <li>Enhanced configuration handling and logging system.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Projects Section */}
+        {/* Featured Projects Section - Moved before Open Source */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Code className="w-6 h-6 text-purple-400" />
@@ -180,7 +112,7 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-2 gap-6">
             {/* NewsGuardian */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
               <h3 className="text-xl font-bold mb-3 text-blue-300">NewsGuardian</h3>
               <p className="text-gray-300 mb-4">
                 A tool for Reddit news discovery, summarization, and credibility analysis. Evaluates writing style, recency, poster reliability, and assigns trust scores.
@@ -199,7 +131,7 @@ const Index = () => {
             </div>
 
             {/* ZenDeskify */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
               <h3 className="text-xl font-bold mb-3 text-blue-300">ZenDeskify</h3>
               <p className="text-gray-300 mb-4">
                 An intelligent IT Support Ticket System analyzing 100,000+ tickets. Features priority ranking, resolution time prediction, and IT owner assignment using ML and LLM models.
@@ -218,7 +150,7 @@ const Index = () => {
               </a>
             </div>
 
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
               <h3 className="text-xl font-bold mb-3 text-purple-300">Invoice Similarity Checker</h3>
               <p className="text-gray-300 mb-4">
                 An invoice comparison tool using NLP and computer vision techniques. Extracts text and structural features from PDFs, performs preprocessing and similarity analysis.
@@ -237,7 +169,7 @@ const Index = () => {
             </div>
 
             {/* Facial Emotion Analyzer */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
               <h3 className="text-xl font-bold mb-3 text-green-300">Facial Emotion Analyzer</h3>
               <p className="text-gray-300 mb-4">
                 A facial emotion detection model identifying seven different emotions from images and webcam input using deep learning techniques.
@@ -253,6 +185,89 @@ const Index = () => {
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Project
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Open Source Contributions Section - Reorganized */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <GitFork className="w-6 h-6 text-orange-400" />
+            Open Source Contributions
+          </h2>
+          <div className="grid grid-cols-2 gap-6">
+            {/* First Row */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Nextcloud</span> / 
+                <span className="text-purple-300">Summary Bot</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Implemented Job Persistence using SQLAlchemyJobStore with SQLite.</li>
+                <li>Enhanced Reliability through improved APScheduler implementation.</li>
+                <li>Optimized Database Performance using SQLAlchemy.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-red-300">CERN</span> / 
+                <span className="text-purple-300">cernopendata-portal</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Improved logging output structure for better readability and maintainability.</li>
+                <li>Added an optional "availability" field to dataset records with multiple status options.</li>
+                <li>Enhanced data accessibility and user experience through better field management.</li>
+              </ul>
+            </div>
+
+            {/* Second Row */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Nextcloud</span> / 
+                <span className="text-purple-300">translate2</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Implemented persistent model loading for faster processing.</li>
+                <li>Added thread locking for safe concurrent translations.</li>
+                <li>Enhanced configuration handling and logging system.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-red-300">CERN-IT-INNOVATION</span> / 
+                <span className="text-purple-300">quantum-gates</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Fixed behavior of _preprocess_circuit method in the simulator.</li>
+                <li>Ensured input circuit (t_qiskit_circ) remains unmodified during preprocessing.</li>
+                <li>Introduced proper handling of raw_data to avoid in-place changes.</li>
+              </ul>
+            </div>
+
+            {/* Third Row */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Aiven</span> / 
+                <span className="text-purple-300">CLI Cookbook</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Enabled single-key command copying to simplify user interaction and enhance usability.</li>
+                <li>Created a structured issue template to improve feedback clarity and collaboration.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-green-300">Weaviate</span> / 
+                <span className="text-purple-300">t2v-transformers-models</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Enhanced Meta Endpoint to include model_path in responses.</li>
+                <li>Improved Model Tracking for complex setups.</li>
+                <li>Pull request under review for implementation.</li>
+              </ul>
             </div>
           </div>
         </div>
