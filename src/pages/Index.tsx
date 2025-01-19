@@ -7,6 +7,7 @@ import {
 const Index = () => {
   const [time, setTime] = useState(new Date());
 
+  // Update time every second
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
@@ -15,6 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <div className="bento-grid">
+        {/* Welcome Section */}
         <div className="bento-card col-span-2">
           <h2 className="text-sm text-purple-400 mb-2">welcome</h2>
           <h1 className="text-4xl font-bold mb-4">
@@ -30,6 +32,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Let's Connect Section */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
           <div className="flex flex-col space-y-4">
@@ -56,6 +59,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Education Section */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-blue-400" />
@@ -70,6 +74,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Technical Skills Section */}
         <div className="bento-card col-span-2">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Code className="w-6 h-6 text-purple-400" />
@@ -99,7 +104,7 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Open Source Contributions */}
+        {/* Open Source Contributions Section */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <GitFork className="w-6 h-6 text-orange-400" />
@@ -249,29 +254,10 @@ const Index = () => {
                 View Project
               </a>
             </div>
-
-            {/* ASL Recognizer Model */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 text-yellow-300">ASL Recognizer Model</h3>
-              <p className="text-gray-300 mb-4">
-                A model recognizing individual alphabet signs in American Sign Language with 97% accuracy, showcasing proficiency in interpreting the ASL alphabet.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">TensorFlow</span>
-                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">Keras</span>
-                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">Scikit-learn</span>
-                <span className="px-2 py-1 bg-yellow-900/30 rounded-full text-yellow-300 text-xs">OpenCV</span>
-              </div>
-              <a href="https://github.com/Yuvrajsinghspd09/ASL-Recognizer-Model" target="_blank" rel="noopener noreferrer"
-                 className="flex items-center text-yellow-400 hover:text-yellow-300">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Project
-              </a>
-            </div>
           </div>
         </div>
 
-        {/* Awards Card */}
+        {/* Awards Section */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Award className="w-6 h-6 text-yellow-400" />
