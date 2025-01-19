@@ -8,7 +8,7 @@ const Welcome = () => {
         Hi, I'm <span className="text-blue-400">Yuvraj Singh</span>
       </h1>
       <p className="text-gray-300 text-lg">
-        ML Enthusiast passionate about creating innovative solutions using Machine Learning, Deep Learning, Data Analysis, Artificial Intelligence, Natural Language Processing, and Large Language Models
+        I enjoy working with AI, machine learning, and NLP to solve problems and create useful tools. Always curious, always learning, and excited to turn ideas into reality.
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-2">
         <span className="px-3 py-1 bg-purple-900/50 rounded-full text-purple-300 text-sm">Python</span>
