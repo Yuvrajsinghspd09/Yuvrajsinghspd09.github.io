@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
-import { Github, Mail, Award, Cpu, BookOpen, Code, ExternalLink, Linkedin, Phone } from "lucide-react";
+import { 
+  Github, Mail, Award, Cpu, BookOpen, Code, 
+  ExternalLink, Linkedin, Phone, GitFork, GitPullRequest 
+} from "lucide-react";
 
 const Index = () => {
   const [time, setTime] = useState(new Date());
@@ -12,7 +15,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <div className="bento-grid">
-        {/* Welcome Card */}
         <div className="bento-card col-span-2">
           <h2 className="text-sm text-purple-400 mb-2">welcome</h2>
           <h1 className="text-4xl font-bold mb-4">
@@ -28,7 +30,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Contact Card */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
           <div className="flex flex-col space-y-4">
@@ -55,7 +56,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Education Card */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-blue-400" />
@@ -70,7 +70,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Skills Card */}
         <div className="bento-card col-span-2">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Code className="w-6 h-6 text-purple-400" />
@@ -100,7 +99,75 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Projects Card */}
+        {/* Open Source Contributions */}
+        <div className="bento-card col-span-3">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <GitFork className="w-6 h-6 text-orange-400" />
+            Open Source Contributions
+          </h2>
+          <div className="grid grid-cols-1 gap-6">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Aiven</span> / 
+                <span className="text-purple-300">CLI Cookbook</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Added "Copy to Clipboard": Enabled single-key command copying to simplify user interaction and enhance usability.</li>
+                <li>Streamlined Contributions: Created a structured issue template to improve feedback clarity and collaboration.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-red-300">CERN</span> / 
+                <span className="text-purple-300">cernopendata-portal</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Improved logging output structure for better readability and maintainability.</li>
+                <li>Added an optional "availability" field to dataset records with multiple status options.</li>
+                <li>Enhanced data accessibility and user experience through better field management.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Nextcloud</span> / 
+                <span className="text-purple-300">Summary Bot</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Implemented Job Persistence using SQLAlchemyJobStore with SQLite.</li>
+                <li>Enhanced Reliability through improved APScheduler implementation.</li>
+                <li>Optimized Database Performance using SQLAlchemy.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-green-300">Weaviate</span> / 
+                <span className="text-purple-300">t2v-transformers-models</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Enhanced Meta Endpoint to include model_path in responses.</li>
+                <li>Improved Model Tracking for complex setups.</li>
+                <li>Pull request under review for implementation.</li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Nextcloud</span> / 
+                <span className="text-purple-300">translate2</span>
+              </h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                <li>Implemented persistent model loading for faster processing.</li>
+                <li>Added thread locking for safe concurrent translations.</li>
+                <li>Enhanced configuration handling and logging system.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Projects Section */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Code className="w-6 h-6 text-purple-400" />
@@ -126,7 +193,26 @@ const Index = () => {
               </a>
             </div>
 
-            {/* Invoice Similarity Checker */}
+            {/* ZenDeskify */}
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-3 text-blue-300">ZenDeskify</h3>
+              <p className="text-gray-300 mb-4">
+                An intelligent IT Support Ticket System analyzing 100,000+ tickets. Features priority ranking, resolution time prediction, and IT owner assignment using ML and LLM models.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Python</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Pandas</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Scikit-learn</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Transformers</span>
+                <span className="px-2 py-1 bg-blue-900/30 rounded-full text-blue-300 text-xs">Streamlit</span>
+              </div>
+              <a href="https://github.com/Yuvrajsinghspd09/ZenDeskify" target="_blank" rel="noopener noreferrer"
+                 className="flex items-center text-blue-400 hover:text-blue-300">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Project
+              </a>
+            </div>
+
             <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-3 text-purple-300">Invoice Similarity Checker</h3>
               <p className="text-gray-300 mb-4">
@@ -192,7 +278,7 @@ const Index = () => {
             Honors & Awards
           </h2>
           <div className="p-6 bg-card-hover rounded-lg">
-            <h3 className="text-xl font-bold mb-3 text-yellow-300">American Express Campus Challenge 2024</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#37A1D7]">American Express Campus Challenge 2024</h3>
             <p className="text-gray-300">
               Ranked in Top 20 for showcasing product mindset and data analytics skills to analyze match performances and
               provide insights.
