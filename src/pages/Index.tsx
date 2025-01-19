@@ -7,7 +7,6 @@ import {
 const Index = () => {
   const [time, setTime] = useState(new Date());
 
-  // Update time every second
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
@@ -23,16 +22,19 @@ const Index = () => {
             Hi, I'm <span className="text-blue-400">Yuvraj Singh</span>
           </h1>
           <p className="text-gray-300 text-lg">
-            ML Enthusiast passionate about creating innovative solutions using Machine Learning and Deep Learning
+            ML Enthusiast passionate about creating innovative solutions using Machine Learning, Deep Learning, Data Analysis, Artificial Intelligence, Natural Language Processing, and Large Language Models
           </p>
-          <div className="mt-4 flex items-center gap-2">
+          <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="px-3 py-1 bg-purple-900/50 rounded-full text-purple-300 text-sm">Python</span>
             <span className="px-3 py-1 bg-blue-900/50 rounded-full text-blue-300 text-sm">TensorFlow</span>
             <span className="px-3 py-1 bg-green-900/50 rounded-full text-green-300 text-sm">Deep Learning</span>
+            <span className="px-3 py-1 bg-red-900/50 rounded-full text-red-300 text-sm">Data Analysis</span>
+            <span className="px-3 py-1 bg-yellow-900/50 rounded-full text-yellow-300 text-sm">AI</span>
+            <span className="px-3 py-1 bg-indigo-900/50 rounded-full text-indigo-300 text-sm">NLP</span>
+            <span className="px-3 py-1 bg-pink-900/50 rounded-full text-pink-300 text-sm">LLMs</span>
           </div>
         </div>
 
-        {/* Let's Connect Section */}
         <div className="bento-card">
           <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
           <div className="flex flex-col space-y-4">
@@ -197,82 +199,81 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-2 gap-6">
             {/* First Row */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">
                 <span className="text-blue-300">Nextcloud</span> / 
                 <span className="text-purple-300">Summary Bot</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Implemented Job Persistence using SQLAlchemyJobStore with SQLite.</li>
-                <li>Enhanced Reliability through improved APScheduler implementation.</li>
-                <li>Optimized Database Performance using SQLAlchemy.</li>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Implemented Job Persistence using SQLAlchemyJobStore with SQLite.</span></li>
+                <li className="pl-2"><span className="block">Enhanced Reliability through improved APScheduler implementation.</span></li>
+                <li className="pl-2"><span className="block">Optimized Database Performance using SQLAlchemy.</span></li>
               </ul>
             </div>
 
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">
                 <span className="text-red-300">CERN</span> / 
                 <span className="text-purple-300">cernopendata-portal</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Improved logging output structure for better readability and maintainability.</li>
-                <li>Added an optional "availability" field to dataset records with multiple status options.</li>
-                <li>Enhanced data accessibility and user experience through better field management.</li>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Improved logging output structure for better readability and maintainability.</span></li>
+                <li className="pl-2"><span className="block">Added an optional "availability" field to dataset records with multiple status options.</span></li>
+                <li className="pl-2"><span className="block">Enhanced data accessibility and user experience through better field management.</span></li>
               </ul>
             </div>
 
             {/* Second Row */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
-              <h3 className="text-xl font-bold mb-2">
-                <span className="text-blue-300">Nextcloud</span> / 
-                <span className="text-purple-300">translate2</span>
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Implemented persistent model loading for faster processing.</li>
-                <li>Added thread locking for safe concurrent translations.</li>
-                <li>Enhanced configuration handling and logging system.</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">
                 <span className="text-red-300">CERN-IT-INNOVATION</span> / 
                 <span className="text-purple-300">quantum-gates</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Fixed behavior of _preprocess_circuit method in the simulator.</li>
-                <li>Ensured input circuit (t_qiskit_circ) remains unmodified during preprocessing.</li>
-                <li>Introduced proper handling of raw_data to avoid in-place changes.</li>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Fixed behavior of _preprocess_circuit method in the simulator.</span></li>
+                <li className="pl-2"><span className="block">Ensured input circuit (t_qiskit_circ) remains unmodified during preprocessing.</span></li>
+                <li className="pl-2"><span className="block">Introduced proper handling of raw_data to avoid in-place changes.</span></li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2">
+                <span className="text-blue-300">Nextcloud</span> / 
+                <span className="text-purple-300">translate2</span>
+              </h3>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Implemented persistent model loading for faster processing.</span></li>
+                <li className="pl-2"><span className="block">Added thread locking for safe concurrent translations.</span></li>
+                <li className="pl-2"><span className="block">Enhanced configuration handling and logging system.</span></li>
               </ul>
             </div>
 
             {/* Third Row */}
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">
                 <span className="text-blue-300">Aiven</span> / 
                 <span className="text-purple-300">CLI Cookbook</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Enabled single-key command copying to simplify user interaction and enhance usability.</li>
-                <li>Created a structured issue template to improve feedback clarity and collaboration.</li>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Enabled single-key command copying to simplify user interaction and enhance usability.</span></li>
+                <li className="pl-2"><span className="block">Created a structured issue template to improve feedback clarity and collaboration.</span></li>
               </ul>
             </div>
 
-            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
+            <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300">
               <h3 className="text-xl font-bold mb-2">
                 <span className="text-green-300">Weaviate</span> / 
                 <span className="text-purple-300">t2v-transformers-models</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                <li>Enhanced Meta Endpoint to include model_path in responses.</li>
-                <li>Improved Model Tracking for complex setups.</li>
-                <li>Pull request under review for implementation.</li>
+              <ul className="list-disc ml-4 text-gray-300 space-y-2">
+                <li className="pl-2"><span className="block">Enhanced Meta Endpoint to include model_path in responses.</span></li>
+                <li className="pl-2"><span className="block">Improved Model Tracking for complex setups.</span></li>
+                <li className="pl-2"><span className="block">Pull request under review for implementation.</span></li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Awards Section */}
         <div className="bento-card col-span-3">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Award className="w-6 h-6 text-yellow-400" />
