@@ -71,7 +71,7 @@ const FeaturedProjects = () => {
         <div className="p-6 bg-card-hover rounded-lg hover:scale-105 transition-all duration-300 transform scale-85">
           <h3 className="text-xl font-bold mb-3 text-green-300">ASL Recognizer</h3>
           <p className="text-gray-300 mb-4">
-            A real-time American Sign Language recognition system using computer vision and deep learning to translate hand gestures into text, making communication more accessible.
+            A deep learning model that translates American Sign Language hand gestures into text with 97% accuracy. Performed image preprocessing and applied regularization techniques to reduce overfitting.
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">TensorFlow</span>
@@ -79,7 +79,7 @@ const FeaturedProjects = () => {
             <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">OpenCV</span>
             <span className="px-2 py-1 bg-green-900/30 rounded-full text-green-300 text-xs">Deep Learning</span>
           </div>
-          <a href="https://github.com/Yuvrajsinghspd09/ASL-Recognizer" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/Yuvrajsinghspd09/ASL-Recognizer-Model" target="_blank" rel="noopener noreferrer"
              className="flex items-center text-green-400 hover:text-green-300">
             <ExternalLink className="w-4 h-4 mr-2" />
             View Project
