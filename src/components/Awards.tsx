@@ -11,8 +11,9 @@ const Awards = () => {
       <div className="p-6 bg-card-hover rounded-lg">
         <h3 className="text-xl font-bold mb-3 text-[#37A1D7]">American Express Campus Challenge 2024</h3>
         <p className="text-gray-300">
-          Ranked in Top 20 for showcasing product mindset and data analytics skills to analyze match performances and
-          provide insights.
+          Ranked 19th in India by showcasing data analysis and decision-making skills. Analyzed 7 datasets 
+          (10k rows each) to uncover actionable insights from cricket statistics and presented data-driven strategies 
+          in the final round.
         </p>
       </div>
     </div>
